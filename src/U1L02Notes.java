@@ -36,6 +36,5 @@ public class U1L02Notes {
 	 
 	 //Print answer
 	 System.out.println(null, cash + "is" + nickels + "nickels and " + pennies + "pennies.");
-
 	}
 }
