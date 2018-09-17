@@ -3,8 +3,9 @@ import javax.swing.JOptionPane;
 public class U1L02Notes {
 
 	public static void main(String[] args) {
-	
-	 //Pseudo code:
+	//HW for dimes and quarters is commented in all caps.
+	//Pseudo code:
+	/*
 	//asks for the input of the cash amount
 	String answer = JOptionPane.showInputDialog("Entere the monetary value (ex. 1.56): ");
 //	 makes it an integer to use as a number
@@ -16,11 +17,14 @@ public class U1L02Notes {
 //	 print "For" + change + "in dollars equals" + nickel number + "in nickels and " + pennies
 //	 + "in pennies."
 	JOptionPane.showMessageDialog(null, cash + " is " + nickels + " nickels and " + pennies + " pennies.");
+	 */
 	 //OR
-	 /*
+	 
 	 //Define variables (nickels, etc.)
-	 int nickels = 0;
-	 int pennies = 0;
+	int quarters = 0;
+	int dimes = 0;
+	int nickels = 0;
+	int pennies = 0;
 	 
 	 //Get input and Change into an integer
 	 String answer = JOptionPane.showInputDialog("Entere the monetary value (ex. 1.56): ");
@@ -30,8 +34,18 @@ public class U1L02Notes {
 	 pennies = (int)(cash * 100);
 	 System.out.println(pennies);
 	 
-	 //While money > .05 {
-	 while (pennies > 5) {
+	 //While money > .24 {
+	 while (pennies > 24) {
+		 quarter++;
+			//money -= .25
+			 pennies -= 25;
+	 }
+	 while (pennies > 9) {
+		 dimes++;
+			//money -= .10
+			 pennies -= 10;
+	 }
+	 while (pennies > 4) {
 		//nickels += 1
 		 nickels++;
 		//money -= .05
@@ -39,7 +53,8 @@ public class U1L02Notes {
 	 }
 	 
 	 //Print answer
-	 JOptionPane.showMessageDialog(null, cash + "is" + nickels + "nickels and " + pennies + "pennies.");
-	  */
+	 JOptionPane.showMessageDialog(null, cash + "is" + quarters + " quarters, " + dimes + " nickels, "
+			 + nickels + " nickels, and " + pennies + "pennies.");
+	 
 	}
 }
